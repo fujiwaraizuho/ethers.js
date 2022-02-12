@@ -1,6 +1,6 @@
-import u2f from "@ledgerhq/hw-transport-u2f";
+import type { Transport } from "@ledgerhq/hw-transport-node-hid";
 export declare type TransportCreator = {
-    create: () => Promise<u2f.Transport>;
+    create: () => Promise<Transport>;
 };
 export declare const transports: {
     [name: string]: TransportCreator;
